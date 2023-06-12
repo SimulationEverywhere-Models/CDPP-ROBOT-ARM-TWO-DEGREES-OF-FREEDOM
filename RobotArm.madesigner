@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="__n-pYC8aEeGWrevdhqSiiQ" modelName="TOP" defined="true" sourceFileRelativePath="RobotArm.ma">
+    <ports xmi:type="CoupledPort" xmi:id="__n-pYS8aEeGWrevdhqSiiQ" portName="RobotJ1" portType="OUTPUT_PORT" incomingLinks="__n-pmS8aEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="__n-pYi8aEeGWrevdhqSiiQ" portName="RobotJ2" portType="OUTPUT_PORT" incomingLinks="__n-pmi8aEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="__n-pYy8aEeGWrevdhqSiiQ" portName="RobotEfficiency" portType="OUTPUT_PORT" incomingLinks="__n-pmy8aEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="__n-pZC8aEeGWrevdhqSiiQ" portName="User_Input" outgoingLinks="__n-pmC8aEeGWrevdhqSiiQ"/>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="__n-pZS8aEeGWrevdhqSiiQ" instanceName="Homing">
+      <modelType xmi:type="CoupledModelType" xmi:id="__n-pZi8aEeGWrevdhqSiiQ" modelName="Homing">
+        <ports xmi:type="CoupledPort" xmi:id="__n-pZy8aEeGWrevdhqSiiQ" portName="Homed" portType="OUTPUT_PORT" incomingLinks="__n-pdy8aEeGWrevdhqSiiQ" outgoingLinks="__n-pnS8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-paC8aEeGWrevdhqSiiQ" portName="H_Homing_Command" incomingLinks="__n-pnC8aEeGWrevdhqSiiQ" outgoingLinks="__n-pdS8aEeGWrevdhqSiiQ"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="__n-paS8aEeGWrevdhqSiiQ" instanceName="Joint1">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="__n-pai8aEeGWrevdhqSiiQ" modelName="Joint1" defined="true" sourceFileRelativePath="Joint1.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-pay8aEeGWrevdhqSiiQ" portName="Homing" incomingLinks="__n-pdS8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-pbC8aEeGWrevdhqSiiQ" portName="Done" portType="OUTPUT_PORT" outgoingLinks="__n-pdi8aEeGWrevdhqSiiQ"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__n-pbS8aEeGWrevdhqSiiQ" name="homingtime"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__n-pbi8aEeGWrevdhqSiiQ" name="homingtime" value="00:00:00:180"/>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="__n-pby8aEeGWrevdhqSiiQ" instanceName="Joint2">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="__n-pcC8aEeGWrevdhqSiiQ" modelName="Joint2" defined="true" sourceFileRelativePath="Joint2.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-pcS8aEeGWrevdhqSiiQ" portName="Homing" incomingLinks="__n-pdi8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-pci8aEeGWrevdhqSiiQ" portName="Done" portType="OUTPUT_PORT" outgoingLinks="__n-pdy8aEeGWrevdhqSiiQ"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__n-pcy8aEeGWrevdhqSiiQ" name="homingtime"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__n-pdC8aEeGWrevdhqSiiQ" name="homingtime" value="00:00:00:180"/>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="__n-pdS8aEeGWrevdhqSiiQ" target="__n-pay8aEeGWrevdhqSiiQ" source="__n-paC8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pdi8aEeGWrevdhqSiiQ" target="__n-pcS8aEeGWrevdhqSiiQ" source="__n-pbC8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pdy8aEeGWrevdhqSiiQ" target="__n-pZy8aEeGWrevdhqSiiQ" source="__n-pci8aEeGWrevdhqSiiQ"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="__n-peC8aEeGWrevdhqSiiQ" instanceName="MotionController">
+      <modelType xmi:type="CoupledModelType" xmi:id="__n-peS8aEeGWrevdhqSiiQ" modelName="MotionController">
+        <ports xmi:type="CoupledPort" xmi:id="__n-pei8aEeGWrevdhqSiiQ" portName="Input_Command" incomingLinks="__n-pmC8aEeGWrevdhqSiiQ" outgoingLinks="__n-pkC8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-pey8aEeGWrevdhqSiiQ" portName="Done" incomingLinks="__n-pnS8aEeGWrevdhqSiiQ" outgoingLinks="__n-pkS8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-pfC8aEeGWrevdhqSiiQ" portName="M_Homing_Command" portType="OUTPUT_PORT" incomingLinks="__n-pki8aEeGWrevdhqSiiQ" outgoingLinks="__n-pnC8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-pfS8aEeGWrevdhqSiiQ" portName="OutJ1_Pos" portType="OUTPUT_PORT" incomingLinks="__n-pky8aEeGWrevdhqSiiQ" outgoingLinks="__n-pmS8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-pfi8aEeGWrevdhqSiiQ" portName="OutJ2_Pos" portType="OUTPUT_PORT" incomingLinks="__n-plC8aEeGWrevdhqSiiQ" outgoingLinks="__n-pmi8aEeGWrevdhqSiiQ"/>
+        <ports xmi:type="CoupledPort" xmi:id="__n-pfy8aEeGWrevdhqSiiQ" portName="OutEfficiency" portType="OUTPUT_PORT" incomingLinks="__n-plS8aEeGWrevdhqSiiQ" outgoingLinks="__n-pmy8aEeGWrevdhqSiiQ"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="__n-pgC8aEeGWrevdhqSiiQ" instanceName="Decision">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="__n-pgS8aEeGWrevdhqSiiQ" modelName="Decision" defined="true" sourceFileRelativePath="Decision.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-pgi8aEeGWrevdhqSiiQ" portName="UserCommand" incomingLinks="__n-pkC8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-pgy8aEeGWrevdhqSiiQ" portName="Done_Motion" incomingLinks="__n-ply8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-phC8aEeGWrevdhqSiiQ" portName="Done_Homing" incomingLinks="__n-pkS8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-phS8aEeGWrevdhqSiiQ" portName="Motion_Command" portType="OUTPUT_PORT" outgoingLinks="__n-pli8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-phi8aEeGWrevdhqSiiQ" portName="Home_Command" portType="OUTPUT_PORT" outgoingLinks="__n-pki8aEeGWrevdhqSiiQ"/>
+          </modelType>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="__n-phy8aEeGWrevdhqSiiQ" instanceName="Motion">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="__n-piC8aEeGWrevdhqSiiQ" modelName="Motion" defined="true" sourceFileRelativePath="Motion.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="__n-piS8aEeGWrevdhqSiiQ" portName="Command" incomingLinks="__n-pli8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-pii8aEeGWrevdhqSiiQ" portName="Done" portType="OUTPUT_PORT" outgoingLinks="__n-ply8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-piy8aEeGWrevdhqSiiQ" portName="J1_Position" portType="OUTPUT_PORT" outgoingLinks="__n-pky8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-pjC8aEeGWrevdhqSiiQ" portName="J2_Position" portType="OUTPUT_PORT" outgoingLinks="__n-plC8aEeGWrevdhqSiiQ"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="__n-pjS8aEeGWrevdhqSiiQ" portName="Efficiency" portType="OUTPUT_PORT" outgoingLinks="__n-plS8aEeGWrevdhqSiiQ"/>
+            <parameters xmi:type="AtomicModelTypeParameter" xmi:id="__n-pji8aEeGWrevdhqSiiQ" name="timeout"/>
+          </modelType>
+          <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="__n-pjy8aEeGWrevdhqSiiQ" name="timeout" value="00:00:00:400"/>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="__n-pkC8aEeGWrevdhqSiiQ" target="__n-pgi8aEeGWrevdhqSiiQ" source="__n-pei8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pkS8aEeGWrevdhqSiiQ" target="__n-phC8aEeGWrevdhqSiiQ" source="__n-pey8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pki8aEeGWrevdhqSiiQ" target="__n-pfC8aEeGWrevdhqSiiQ" source="__n-phi8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pky8aEeGWrevdhqSiiQ" target="__n-pfS8aEeGWrevdhqSiiQ" source="__n-piy8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-plC8aEeGWrevdhqSiiQ" target="__n-pfi8aEeGWrevdhqSiiQ" source="__n-pjC8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-plS8aEeGWrevdhqSiiQ" target="__n-pfy8aEeGWrevdhqSiiQ" source="__n-pjS8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-pli8aEeGWrevdhqSiiQ" target="__n-piS8aEeGWrevdhqSiiQ" source="__n-phS8aEeGWrevdhqSiiQ"/>
+        <links xmi:type="CoupledLink" xmi:id="__n-ply8aEeGWrevdhqSiiQ" target="__n-pgy8aEeGWrevdhqSiiQ" source="__n-pii8aEeGWrevdhqSiiQ"/>
+      </modelType>
+    </coupledModels>
+    <links xmi:type="CoupledLink" xmi:id="__n-pmC8aEeGWrevdhqSiiQ" target="__n-pei8aEeGWrevdhqSiiQ" source="__n-pZC8aEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="__n-pmS8aEeGWrevdhqSiiQ" target="__n-pYS8aEeGWrevdhqSiiQ" source="__n-pfS8aEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="__n-pmi8aEeGWrevdhqSiiQ" target="__n-pYi8aEeGWrevdhqSiiQ" source="__n-pfi8aEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="__n-pmy8aEeGWrevdhqSiiQ" target="__n-pYy8aEeGWrevdhqSiiQ" source="__n-pfy8aEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="__n-pnC8aEeGWrevdhqSiiQ" target="__n-paC8aEeGWrevdhqSiiQ" source="__n-pfC8aEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="__n-pnS8aEeGWrevdhqSiiQ" target="__n-pey8aEeGWrevdhqSiiQ" source="__n-pZy8aEeGWrevdhqSiiQ"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="__n_3gC8aEeGWrevdhqSiiQ" type="DEVS" element="__n-pYC8aEeGWrevdhqSiiQ" name="RobotArm.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="__n_3gS8aEeGWrevdhqSiiQ"/>
+  </notation:Diagram>
+</xmi:XMI>

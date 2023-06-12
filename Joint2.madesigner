@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_s6teIC67EeGHVO5e74ipQA" modelName="TOP" defined="true" sourceFileRelativePath="Joint2.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_s6teIS67EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" incomingLinks="_s6uFMC67EeGHVO5e74ipQA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_s6teIi67EeGHVO5e74ipQA" portName="Homing" outgoingLinks="_s6teKS67EeGHVO5e74ipQA"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_s6teIy67EeGHVO5e74ipQA" instanceName="Joint2">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_s6teJC67EeGHVO5e74ipQA" modelName="Joint2" defined="true" sourceFileRelativePath="Joint2.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_s6teJS67EeGHVO5e74ipQA" portName="Homing" incomingLinks="_s6teKS67EeGHVO5e74ipQA"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_s6teJi67EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" outgoingLinks="_s6uFMC67EeGHVO5e74ipQA"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_s6teJy67EeGHVO5e74ipQA" name="homingtime"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_s6teKC67EeGHVO5e74ipQA" name="homingtime" value="00:00:00:180"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_s6teKS67EeGHVO5e74ipQA" target="_s6teJS67EeGHVO5e74ipQA" source="_s6teIi67EeGHVO5e74ipQA"/>
+    <links xmi:type="CoupledLink" xmi:id="_s6uFMC67EeGHVO5e74ipQA" target="_s6teIS67EeGHVO5e74ipQA" source="_s6teJi67EeGHVO5e74ipQA"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_s6uFMS67EeGHVO5e74ipQA" type="DEVS" element="_s6teIC67EeGHVO5e74ipQA" name="Joint2.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_s6uFMi67EeGHVO5e74ipQA"/>
+  </notation:Diagram>
+</xmi:XMI>

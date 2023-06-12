@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <TOP>
+    <components> Motion@Motion&#xd;</components>
+    <in> Command&#xd;</in>
+    <out> Done&#xd;</out>
+    <out> J1_Position J2_Position&#xd;</out>
+    <out> Efficiency&#xd;</out>
+    <Link> Command Command@Motion&#xd;</Link>
+    <Link> Done@Motion Done&#xd;</Link>
+    <Link> J1_Position@Motion J1_Position&#xd;</Link>
+    <Link> J2_Position@Motion J2_Position&#xd;</Link>
+    <Link> Efficiency@Motion Efficiency&#xd;</Link>
+  </TOP>
+</CDPlusPlus_Builder_Version_1.0.0>

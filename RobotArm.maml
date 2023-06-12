@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <TOP>
+    <components> Homing MotionController&#xd;</components>
+    <out> RobotJ1 RobotJ2 RobotEfficiency&#xd;</out>
+    <in> User_Input&#xd;</in>
+    <Link> User_Input Input_Command@MotionController&#xd;</Link>
+    <Link> OutJ1_Pos@MotionController RobotJ1&#xd;</Link>
+    <Link> OutJ2_Pos@MotionController RobotJ2&#xd;</Link>
+    <Link> OutEfficiency@MotionController RobotEfficiency&#xd;</Link>
+    <Link> M_Homing_Command@MotionController H_Homing_Command@Homing&#xd;</Link>
+    <Link> Homed@Homing Done@MotionController&#xd;</Link>
+  </TOP>
+  <Homing>
+    <components> Joint1@Joint1 Joint2@Joint2&#xd;</components>
+    <out> Homed&#xd;</out>
+    <in> H_Homing_Command&#xd;</in>
+    <Link> H_Homing_Command Homing@Joint1&#xd;</Link>
+    <Link> Done@Joint1 Homing@Joint2&#xd;</Link>
+    <Link> Done@Joint2 Homed&#xd;</Link>
+  </Homing>
+  <MotionController>
+    <components> Decision@Decision Motion@Motion&#xd;</components>
+    <in> Input_Command Done&#xd;</in>
+    <out> M_Homing_Command OutJ1_Pos OutJ2_Pos OutEfficiency&#xd;</out>
+    <Link> Input_Command UserCommand@Decision&#xd;</Link>
+    <Link> Done Done_Homing@Decision&#xd;</Link>
+    <Link> Home_Command@Decision M_Homing_Command&#xd;</Link>
+    <Link> J1_Position@Motion OutJ1_Pos&#xd;</Link>
+    <Link> J2_Position@Motion OutJ2_Pos&#xd;</Link>
+    <Link> Efficiency@Motion OutEfficiency&#xd;</Link>
+    <Link> Motion_Command@Decision Command@Motion&#xd;</Link>
+    <Link> Done@Motion Done_Motion@Decision&#xd;</Link>
+  </MotionController>
+  <Decision/>
+  <Motion>
+    <timeout> 00:00:00:400&#xd;</timeout>
+  </Motion>
+  <Joint1>
+    <homingtime> 00:00:00:180&#xd;</homingtime>
+  </Joint1>
+  <Joint2>
+    <homingtime> 00:00:00:180&#xd;</homingtime>
+  </Joint2>
+</CDPlusPlus_Builder_Version_1.0.0>

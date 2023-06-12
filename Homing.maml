@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <TOP>
+    <components> Joint1@Joint1 Joint2@Joint2&#xd;</components>
+    <out> Homed&#xd;</out>
+    <in> H_Homing_Command&#xd;</in>
+    <Link> H_Homing_Command Homing@Joint1&#xd;</Link>
+    <Link> Done@Joint1 Homing@Joint2&#xd;</Link>
+    <Link> Done@Joint2 Homed&#xd;</Link>
+  </TOP>
+  <Joint1>
+    <homingtime> 00:00:00:180&#xd;</homingtime>
+  </Joint1>
+</CDPlusPlus_Builder_Version_1.0.0>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <TOP>
+    <components> Decision@Decision Motion@Motion&#xd;</components>
+    <in> Input_Command Done&#xd;</in>
+    <out> M_Homing_Command OutJ1_Pos OutJ2_Pos OutEfficiency&#xd;</out>
+    <Link> Input_Command UserCommand@Decision&#xd;</Link>
+    <Link> Done Done_Homing@Decision&#xd;</Link>
+    <Link> Home_Command@Decision M_Homing_Command&#xd;</Link>
+    <Link> J1_Position@Motion OutJ1_Pos&#xd;</Link>
+    <Link> J2_Position@Motion OutJ2_Pos&#xd;</Link>
+    <Link> Efficiency@Motion OutEfficiency&#xd;</Link>
+    <Link> Motion_Command@Decision Command@Motion&#xd;</Link>
+    <Link> Done@Motion Done_Motion@Decision&#xd;</Link>
+  </TOP>
+  <Decision/>
+  <Motion>
+    <timeout> 00:00:00:400&#xd;</timeout>
+  </Motion>
+</CDPlusPlus_Builder_Version_1.0.0>

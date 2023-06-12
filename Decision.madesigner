@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_7ZLFYCEeEeGGwYBp4G7DzA" modelName="TOP" defined="true" sourceFileRelativePath="Decision.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_7ZLFYSEeEeGGwYBp4G7DzA" portName="Motion_Command" portType="OUTPUT_PORT" incomingLinks="_7ZLFcCEeEeGGwYBp4G7DzA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_7ZLFYiEeEeGGwYBp4G7DzA" portName="Home_Command" portType="OUTPUT_PORT" incomingLinks="_7ZLFcSEeEeGGwYBp4G7DzA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_7ZLFYyEeEeGGwYBp4G7DzA" portName="UserCommand" outgoingLinks="_7ZLFbSEeEeGGwYBp4G7DzA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_7ZLFZCEeEeGGwYBp4G7DzA" portName="Done_Motion" outgoingLinks="_7ZLFbiEeEeGGwYBp4G7DzA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_7ZLFZSEeEeGGwYBp4G7DzA" portName="Done_Homing" outgoingLinks="_7ZLFbyEeEeGGwYBp4G7DzA"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_7ZLFZiEeEeGGwYBp4G7DzA" instanceName="Decision">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_7ZLFZyEeEeGGwYBp4G7DzA" modelName="Decision" defined="true" sourceFileRelativePath="Decision.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_7ZLFaCEeEeGGwYBp4G7DzA" portName="UserCommand" incomingLinks="_7ZLFbSEeEeGGwYBp4G7DzA"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_7ZLFaSEeEeGGwYBp4G7DzA" portName="Done_Motion" incomingLinks="_7ZLFbiEeEeGGwYBp4G7DzA"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_7ZLFaiEeEeGGwYBp4G7DzA" portName="Done_Homing" incomingLinks="_7ZLFbyEeEeGGwYBp4G7DzA"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_7ZLFayEeEeGGwYBp4G7DzA" portName="Motion_Command" portType="OUTPUT_PORT" outgoingLinks="_7ZLFcCEeEeGGwYBp4G7DzA"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_7ZLFbCEeEeGGwYBp4G7DzA" portName="Home_Command" portType="OUTPUT_PORT" outgoingLinks="_7ZLFcSEeEeGGwYBp4G7DzA"/>
+      </modelType>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_7ZLFbSEeEeGGwYBp4G7DzA" target="_7ZLFaCEeEeGGwYBp4G7DzA" source="_7ZLFYyEeEeGGwYBp4G7DzA"/>
+    <links xmi:type="CoupledLink" xmi:id="_7ZLFbiEeEeGGwYBp4G7DzA" target="_7ZLFaSEeEeGGwYBp4G7DzA" source="_7ZLFZCEeEeGGwYBp4G7DzA"/>
+    <links xmi:type="CoupledLink" xmi:id="_7ZLFbyEeEeGGwYBp4G7DzA" target="_7ZLFaiEeEeGGwYBp4G7DzA" source="_7ZLFZSEeEeGGwYBp4G7DzA"/>
+    <links xmi:type="CoupledLink" xmi:id="_7ZLFcCEeEeGGwYBp4G7DzA" target="_7ZLFYSEeEeGGwYBp4G7DzA" source="_7ZLFayEeEeGGwYBp4G7DzA"/>
+    <links xmi:type="CoupledLink" xmi:id="_7ZLFcSEeEeGGwYBp4G7DzA" target="_7ZLFYiEeEeGGwYBp4G7DzA" source="_7ZLFbCEeEeGGwYBp4G7DzA"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_7ZOIsCEeEeGGwYBp4G7DzA" type="DEVS" element="_7ZLFYCEeEeGGwYBp4G7DzA" name="Decision.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_7ZOvwCEeEeGGwYBp4G7DzA"/>
+  </notation:Diagram>
+</xmi:XMI>

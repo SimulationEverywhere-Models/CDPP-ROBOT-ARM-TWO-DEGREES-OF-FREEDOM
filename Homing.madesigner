@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_F8C0oC68EeGHVO5e74ipQA" modelName="TOP" defined="true" sourceFileRelativePath="Homing.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_F8C0oS68EeGHVO5e74ipQA" portName="Homed" portType="OUTPUT_PORT" incomingLinks="_F8C0si68EeGHVO5e74ipQA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_F8C0oi68EeGHVO5e74ipQA" portName="H_Homing_Command" outgoingLinks="_F8C0sC68EeGHVO5e74ipQA"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_F8C0oy68EeGHVO5e74ipQA" instanceName="Joint1">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_F8C0pC68EeGHVO5e74ipQA" modelName="Joint1" defined="true" sourceFileRelativePath="Joint1.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_F8C0pS68EeGHVO5e74ipQA" portName="Homing" incomingLinks="_F8C0sC68EeGHVO5e74ipQA"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_F8C0pi68EeGHVO5e74ipQA" portName="Joint2_Done"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_F8C0py68EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" outgoingLinks="_F8C0sS68EeGHVO5e74ipQA"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_F8C0qC68EeGHVO5e74ipQA" name="homingtime"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_F8C0qS68EeGHVO5e74ipQA" name="homingtime" value="00:00:00:180"/>
+    </atomicModels>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_F8C0qi68EeGHVO5e74ipQA" instanceName="Joint2">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_F8C0qy68EeGHVO5e74ipQA" modelName="Joint2" defined="true" sourceFileRelativePath="Joint2.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_F8C0rC68EeGHVO5e74ipQA" portName="Homing" incomingLinks="_F8C0sS68EeGHVO5e74ipQA"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_F8C0rS68EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" outgoingLinks="_F8C0si68EeGHVO5e74ipQA"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_F8C0ri68EeGHVO5e74ipQA" name="homingtime"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_F8C0ry68EeGHVO5e74ipQA" name="homingtime" value="00:00:00:180"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_F8C0sC68EeGHVO5e74ipQA" target="_F8C0pS68EeGHVO5e74ipQA" source="_F8C0oi68EeGHVO5e74ipQA"/>
+    <links xmi:type="CoupledLink" xmi:id="_F8C0sS68EeGHVO5e74ipQA" target="_F8C0rC68EeGHVO5e74ipQA" source="_F8C0py68EeGHVO5e74ipQA"/>
+    <links xmi:type="CoupledLink" xmi:id="_F8C0si68EeGHVO5e74ipQA" target="_F8C0oS68EeGHVO5e74ipQA" source="_F8C0rS68EeGHVO5e74ipQA"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_F8DbsC68EeGHVO5e74ipQA" type="DEVS" element="_F8C0oC68EeGHVO5e74ipQA" name="Homing.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_F8DbsS68EeGHVO5e74ipQA"/>
+  </notation:Diagram>
+</xmi:XMI>

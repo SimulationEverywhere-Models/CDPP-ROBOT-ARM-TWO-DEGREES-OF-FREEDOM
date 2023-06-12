@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_Cgw0YC8bEeGWrevdhqSiiQ" modelName="TOP" defined="true" sourceFileRelativePath="Motion.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_Cgw0YS8bEeGWrevdhqSiiQ" portName="Command" outgoingLinks="_Cgw0by8bEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="_Cgw0Yi8bEeGWrevdhqSiiQ" portName="Done" portType="OUTPUT_PORT" incomingLinks="_Cgw0cC8bEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="_Cgw0Yy8bEeGWrevdhqSiiQ" portName="J1_Position" portType="OUTPUT_PORT" incomingLinks="_Cgw0cS8bEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="_Cgw0ZC8bEeGWrevdhqSiiQ" portName="J2_Position" portType="OUTPUT_PORT" incomingLinks="_Cgw0ci8bEeGWrevdhqSiiQ"/>
+    <ports xmi:type="CoupledPort" xmi:id="_Cgw0ZS8bEeGWrevdhqSiiQ" portName="Efficiency" portType="OUTPUT_PORT" incomingLinks="_Cgw0cy8bEeGWrevdhqSiiQ"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_Cgw0Zi8bEeGWrevdhqSiiQ" instanceName="Motion">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_Cgw0Zy8bEeGWrevdhqSiiQ" modelName="Motion" defined="true" sourceFileRelativePath="Motion.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_Cgw0aC8bEeGWrevdhqSiiQ" portName="Command" incomingLinks="_Cgw0by8bEeGWrevdhqSiiQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_Cgw0aS8bEeGWrevdhqSiiQ" portName="Done" portType="OUTPUT_PORT" outgoingLinks="_Cgw0cC8bEeGWrevdhqSiiQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_Cgw0ai8bEeGWrevdhqSiiQ" portName="J1_Position" portType="OUTPUT_PORT" outgoingLinks="_Cgw0cS8bEeGWrevdhqSiiQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_Cgw0ay8bEeGWrevdhqSiiQ" portName="J2_Position" portType="OUTPUT_PORT" outgoingLinks="_Cgw0ci8bEeGWrevdhqSiiQ"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_Cgw0bC8bEeGWrevdhqSiiQ" portName="Efficiency" portType="OUTPUT_PORT" outgoingLinks="_Cgw0cy8bEeGWrevdhqSiiQ"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_Cgw0bS8bEeGWrevdhqSiiQ" name="timeout"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_Cgw0bi8bEeGWrevdhqSiiQ" name="timeout" value="00:00:00:400"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_Cgw0by8bEeGWrevdhqSiiQ" target="_Cgw0aC8bEeGWrevdhqSiiQ" source="_Cgw0YS8bEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_Cgw0cC8bEeGWrevdhqSiiQ" target="_Cgw0Yi8bEeGWrevdhqSiiQ" source="_Cgw0aS8bEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_Cgw0cS8bEeGWrevdhqSiiQ" target="_Cgw0Yy8bEeGWrevdhqSiiQ" source="_Cgw0ai8bEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_Cgw0ci8bEeGWrevdhqSiiQ" target="_Cgw0ZC8bEeGWrevdhqSiiQ" source="_Cgw0ay8bEeGWrevdhqSiiQ"/>
+    <links xmi:type="CoupledLink" xmi:id="_Cgw0cy8bEeGWrevdhqSiiQ" target="_Cgw0ZS8bEeGWrevdhqSiiQ" source="_Cgw0bC8bEeGWrevdhqSiiQ"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_CgxbcC8bEeGWrevdhqSiiQ" type="DEVS" element="_Cgw0YC8bEeGWrevdhqSiiQ" name="Motion.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_CgxbcS8bEeGWrevdhqSiiQ"/>
+  </notation:Diagram>
+</xmi:XMI>

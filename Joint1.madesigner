@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_u7ffkC66EeGHVO5e74ipQA" modelName="TOP" defined="true" sourceFileRelativePath="Joint1.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_u7ffkS66EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" incomingLinks="_u7ffmy66EeGHVO5e74ipQA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_u7ffki66EeGHVO5e74ipQA" portName="Homing" outgoingLinks="_u7ffmi66EeGHVO5e74ipQA"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_u7ffky66EeGHVO5e74ipQA" instanceName="Joint1">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_u7fflC66EeGHVO5e74ipQA" modelName="Joint1" defined="true" sourceFileRelativePath="Joint1.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_u7fflS66EeGHVO5e74ipQA" portName="Homing" incomingLinks="_u7ffmi66EeGHVO5e74ipQA"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_u7ffli66EeGHVO5e74ipQA" portName="Joint2_Done"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_u7ffly66EeGHVO5e74ipQA" portName="Done" portType="OUTPUT_PORT" outgoingLinks="_u7ffmy66EeGHVO5e74ipQA"/>
+        <parameters xmi:type="AtomicModelTypeParameter" xmi:id="_u7ffmC66EeGHVO5e74ipQA" name="homingtime"/>
+      </modelType>
+      <parameters xmi:type="AtomicModelInstanceParameter" xmi:id="_u7ffmS66EeGHVO5e74ipQA" name="homingtime" value="00:00:00:180"/>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_u7ffmi66EeGHVO5e74ipQA" target="_u7fflS66EeGHVO5e74ipQA" source="_u7ffki66EeGHVO5e74ipQA"/>
+    <links xmi:type="CoupledLink" xmi:id="_u7ffmy66EeGHVO5e74ipQA" target="_u7ffkS66EeGHVO5e74ipQA" source="_u7ffly66EeGHVO5e74ipQA"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_u7gGoC66EeGHVO5e74ipQA" type="DEVS" element="_u7ffkC66EeGHVO5e74ipQA" name="Joint1.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_u7gGoS66EeGHVO5e74ipQA"/>
+  </notation:Diagram>
+</xmi:XMI>

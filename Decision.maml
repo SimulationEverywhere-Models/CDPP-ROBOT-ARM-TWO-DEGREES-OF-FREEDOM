@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <TOP>
+    <components> Decision@Decision&#xd;</components>
+    <out> Motion_Command&#xd;</out>
+    <out> Home_Command&#xd;</out>
+    <in> UserCommand&#xd;</in>
+    <in> Done_Motion&#xd;</in>
+    <in> Done_Homing&#xd;</in>
+    <Link> UserCommand UserCommand@Decision&#xd;</Link>
+    <Link> Done_Motion Done_Motion@Decision&#xd;</Link>
+    <Link> Done_Homing Done_Homing@Decision&#xd;</Link>
+    <Link> Motion_Command@Decision Motion_Command&#xd;</Link>
+    <Link> Home_Command@Decision Home_Command&#xd;</Link>
+  </TOP>
+</CDPlusPlus_Builder_Version_1.0.0>
